@@ -1,0 +1,107 @@
+@charset "utf-8";
+.homead {
+	text-align: center;
+}
+
+.homead img {
+	width: 1074px;
+	margin-top: 20px;
+}
+
+.contact {
+	margin: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height:66px;
+}
+
+.contact .ctit p {
+	font-size: 22px;
+	color: #0C8DFF;
+}
+.contact .ctit{
+	margin-right:30px;
+}
+.contact .tel{
+	margin-right:30px;
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    color: #FF7E00;
+}
+
+.contact .cname,.contact .cnum{
+	line-height: 50px;
+	height:50px;
+	width:250px;
+	border:1px solid #999999;
+	margin-right:20px;
+}
+.contact .cname{
+	background: url(../images/common/name.png) no-repeat 6px center;
+}
+
+.contact .cnum{
+	background: url(../images/common/tel.png) no-repeat 10px center;
+}
+.contact .cbtn{
+	line-height: 45px;
+	height:45px;
+	padding:0 15px;
+	color: white;
+	background-color: #7f523c;
+	border:none;
+	border-radius: 7px;
+	
+	
+}
+.contact input{
+	font-size: 19px;
+	padding-left:5px;
+	box-sizing: border-box;
+	margin-left:40px;
+	height: 38px;
+	width: 200px;
+	border:none;
+	border-left:1px solid #999999 ;
+}
+.map{
+	width:1100px;
+	margin:0 auto;
+}
+
+.map_txt{
+	margin: 15px 0;
+	height:60px;
+}
+.map_txt p{
+	line-height: 30px;
+	font-size: 18px;
+	height:30px;
+	text-align: center;
+}
+.map_txt span{
+	font-size:18px;
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    color: #0C8DFF;
+}
+.map_txt  p:nth-of-type(1) span{
+		line-height: 30px;
+}
+.map_txt  p:nth-of-type(2) span{
+	margin-top: 6px;
+	font-size: 22px;
+}
+
+.map_txt p i{
+	display: inline-block;
+	width:40px;
+	margin-right:10px;
+	height:18px;
+	line-height: 18px;
+	background: url(../images/common/u166.png) no-repeat;
+}

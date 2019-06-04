@@ -59,12 +59,24 @@ $(function() {
 	$('.left_navdl dd:last').css({
 		'background': 'none'
 	});
-})
-
-	//得到url参数
+	
+		//得到url参数
 	function getUrlParam(name) {
 		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
 		var r = window.location.search.substr(1).match(reg); //匹配目标参数
 		if(r != null) return unescape(r[2]);
 		return null; //返回参数值
 	}
+	
+	let curIdx = getUrlParam('idx') || '';
+				$(document).on('click', '.left_navbox .left_navdl dd', function(e) {
+					$('.left_navdl dd').removeClass('cur');
+					$(this).addClass('cur');
+					let index = $(this).index();
+					$('.page_main').hide();
+					$('.page_main').eq(index - 1).show();
+
+				})
+	$('.left_navbox .left_navdl dd').eq(curIdx).click();
+})
+

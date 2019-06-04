@@ -3943,3 +3943,26 @@ p {
 	height: 22px;
 	cursor: default;
 }
+
+.piclist .noborder li{
+	float:left;
+	width:33.3%;
+}
+.piclist .noborder li img{
+	width: 224px;
+    height: 180px;
+}
+
+.piclist p {
+    line-height: 35px;
+}
+
+.picname {
+    text-align: center;
+}
+.picname a{
+	color: #333;
+    text-decoration: none;
+}
+
+

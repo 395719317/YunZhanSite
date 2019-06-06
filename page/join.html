@@ -1590,19 +1590,6 @@
 				//border
 				$('.join_liuchengbox .liucheng_ul>li dl:not(:first)').css('border-top', 'none');
 			})
-
-			$(function() {
-				let curIdx = getUrlParam('idx') || '';
-				$(document).on('click', '.left_navbox .left_navdl dd', function(e) {
-					$('.left_navdl dd').removeClass('cur');
-					$(this).addClass('cur');
-					let index = $(this).index();
-					$('.page_main').hide();
-					$('.page_main').eq(index - 1).show();
-
-				})
-				$('.left_navbox .left_navdl dd').eq(curIdx).click();
-			})
 		</script>
 
 	</body>

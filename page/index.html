@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
@@ -7,6 +8,7 @@
 		<link type="text/css" rel="stylesheet" href="../css/page.css" />
 		<link rel="stylesheet" href="../css/swiper.css" />
 		<link rel="stylesheet" href="../css/home.css" />
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=A4749739227af1618f7b0d1b588c0e85&s=1"></script>
 	</head>
 
 	<body>
@@ -289,23 +291,93 @@
 			</section>
 		</div>
 
+		
 		<div class="homead">
 			<img src="../images/homead/u160.png" />
 			<img src="../images/homead/u196.jpg" />
-			<img src="../images/homead/u195.png" />
-			<img src="../images/homead/u215.png" />
 			<img src="../images/homead/u198.jpg" />
+			<img src="../images/homead/u215.png" />
 		</div>
+			<div id="section8" class="module section fp-section fp-table active" style="background-color: rgb(157, 232, 237); height: 600px;">
+			<div class="fp-tableCell" style="height:807px;">
 
+				<div class="control bk8 dx">
+					<div class="sev-left">
+						<div class="pad-box">
+							<div class="pad"></div>
+							<div class="pad_content">
+								<img class="xxj" src="../images/homead/svelunbo.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="sev-right">
+						<i class="xxj current" id="xxjClick"></i>
+						<i class="dzb" id="dzbClick"></i>
+						<i class="mm" id="mmClick"></i>
+						<div class="sev-content" style="transform: rotateY(7560deg);">
+							<div class="xxj-content hand" style="display: block;">
+								<i class=""></i>
+								<p>
+									新零售的品牌变革，赋能人、货、场、客重构。以消费者为中心，重构人、货、场、客，通过新技术和O2O，打通各渠道之间的商品、数据和会员，整合多维度的应用场景，最大化品牌产出和运营效率。
+								</p>
+							</div>
+							<div class="mm-content  hand" style="display: none;">
+								<i class=""></i>
+								<p>
+									实时了解门店经营状况及客户购物习惯，整合产品销售、导购业绩和会员消费数据，并提供决策，为门店管理、运筹运营和会员营销提供参考指导为，增加店长运营管理能力
+								</p>
+							</div>
+							<div class="dzb-content hand" style="display: none;">
+								<i class=""></i>
+								<p>
+									实体门店与微商城线上线下相结合，消费者在“萌蜜”轻松选购商品，门店可了解商城销及导购业绩。萌蜜还设置跨境商品专区。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="map">
 			<div class="map_txt">
 				<p><i></i><span>加盟地图</span><i></i></p>
 				<p><span>走在母婴创业领域前沿</span></p>
 			</div>
-			<div class="baidu_map">
-				<iframe class="ueditor_baidumap" src="map.html" frameborder="0" width="1150px" height="600px" align="">
-				</iframe>
-			</div>
+			<section class="cm-main">
+
+				<!-- 校区地图 -->
+				<div class="m-section-block">
+					<div class="m-idx-schoolmap">
+						<div class="cm-container">
+							<div class="m-idx-common-header">
+								<div class="schoolmap-container">
+									<div class="left-map">
+										<div id="idx-map" style="width:670px;height:542px"></div>
+									</div>
+									<div class="right-message">
+										<div class="toggle-menu">
+											<p class="value"><span>未知城市</span><i></i></p>
+											<ul class="select-list">
+											</ul>
+										</div>
+										<div class="img-container">
+											<div class="top">
+											</div>
+											<div class="bottom">
+												<div class="img">
+												</div>
+												<div class="img">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
 		</div>
 
 		<footer class="site_footer">
@@ -444,7 +516,418 @@
 				}
 			})
 		</script>
+		
+		<script type="text/javascript">
+			/*首页独有的js*/
+			$(function() {
+				var le = 0;
+				var sublilen = 0;
+				var w = 0;
+				var marleft = 0; // 图片左右滑动相关
+				var pointData = [{
+					"city": "\u5317\u4eac\u5e02",
+					"name": "\u5317\u4eac\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "116.50132",
+						"lat": "39.967677"
+					},
+					"area": "\u5317\u4eac\u671d\u9633\u533a\u9152\u4ed9\u6865\u8def39\u53f7",
+					"area_detail": "\u4e45\u9686\u767e\u8d27\u5357\u95e8\u8fdb2\u697c",
+					"traffic": "\u5317\u4eac\u5730\u94c114\u53f7\u7ebf\u4e1c\u98ce\u5317\u6865\u7ad9c2\u51fa\u53e3580\u7c73",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201807031200258642.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807031159481987.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271738005948.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737592012.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737582302.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/20180827173757993.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737559944.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737548641.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737526083.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737508559.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737504947.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737488013.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/20180827173747318.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737459162.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737447770.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271737436314.jpg"]
+				}, {
+					"city": "\u4e0a\u6d77\u5e02",
+					"name": "\u4e0a\u6d77\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "121.430964",
+						"lat": "31.215661"
+					},
+					"area": "\u4e0a\u6d77\u5e02\u957f\u5b81\u533a\u5ef6\u5b89\u897f\u8def1358\u53f7",
+					"area_detail": "\u8fce\u9f99\u5927\u53a6",
+					"traffic": "\u5730\u94c13\u53f7\u7ebf\u5ef6\u5b89\u897f\u8def\u4e0b\u8f66\uff082\u53f7\u51fa\u53e3\uff09\u5ef6\u5b89\u897f\u8def\u548c\u5b9a\u897f\u8def\u4ea4\u53c9\u53e3",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201807031157572739.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807031159481987.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807031200258642.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759427177.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759419582.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/20180827175939217.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/20180827175938139.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759375657.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759358845.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/20180827175934302.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759333407.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759316606.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759297126.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759283620.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271759278871.jpg"]
+				}, {
+					"city": "\u5e7f\u5dde\u5e02",
+					"name": "\u5e7f\u5dde\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "113.270103",
+						"lat": "23.090036"
+					},
+					"area": "\u6d77\u73e0\u533a\u5de5\u4e1a\u5927\u9053\u5317132\u53f7",
+					"area_detail": "\u82b1\u57ce\u5f80\u4e8b3\u53f7\u697c\u751c\u871c\u65f6\u5149",
+					"traffic": "\u5730\u94c18\u53f7\u7ebf\u6c99\u56ed\u7ad9B\u51fa\u53e3\u53f3\u624b\u8fb9\u76f4\u8d70600\u7c73\uff08\u516c\u8def\u8fb9\u73bb\u7483\u95e8\uff09",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201807021138094608.png", "http:\/\/www.tmsgschool.com\/upload\/img\/201807021138215443.png", "http:\/\/www.tmsgschool.com\/upload\/img\/201807101528573813.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754364384.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/20180827175435177.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754346051.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754321618.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754314804.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754297878.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754281128.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754264328.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271754253820.jpg"]
+				}, {
+					"city": "\u6df1\u5733\u5e02",
+					"name": "\u6df1\u5733\u603b\u90e8\u5730\u5740",
+					"point": {
+						"lng": "113.963381",
+						"lat": "22.544495"
+					},
+					"area": "\u6df1\u5733\u5e02\u5357\u5c71\u533a\u79d1\u6280\u535712\u8def24\u53f7",
+					"area_detail": "\u5148\u5065\u79d1\u6280\u5927\u53a65\u697c\uff08\u5eb7\u4f73\u7814\u53d1\u5927\u53a6\u9694\u58c1\uff09",
+					"traffic": "",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201806290940242260.png", "http:\/\/www.tmsgschool.com\/upload\/img\/201807101520515615.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807101520508390.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923074886.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923058963.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923042801.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923033401.jpg"]
+				}, {
+					"city": "\u5357\u4eac\u5e02",
+					"name": "\u5357\u4eac\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "118.795404",
+						"lat": "32.048811"
+					},
+					"area": "\u5357\u4eac\u5e02\u7384\u6b66\u533a\u6d2a\u6b66\u5317\u8def16\u53f7",
+					"area_detail": "\u6c47\u91d1\u5927\u53a65\u697c501\u5ba4 ",
+					"traffic": "\u5730\u94c13\u53f7\u7ebf\u5927\u884c\u5bab\uff082\u53f7\u53e3\u51fa\uff09\u6b65\u884c1000\u7c73",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201807021144326696.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807021144469258.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807021144593897.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130932287745.jpg"]
+				}, {
+					"city": "\u6b66\u6c49\u5e02",
+					"name": "\u6b66\u6c49\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "114.347595",
+						"lat": "30.561314"
+					},
+					"area": "\u6b66\u6c49\u5e02\u6b66\u660c\u533a\u4e2d\u5317\u8def31\u53f7\u77e5\u97f3\u5e7f\u573a",
+					"area_detail": "\u77e5\u97f3\u5e7f\u573a4\u697c\uff08\u5730\u94c1\u56db\u53f7\u7ebf\u695a\u6cb3\u6c49\u8857c\u51fa\u53e3\u65c1\uff09",
+					"traffic": "\u5730\u94c1\u56db\u53f7\u7ebf\u695a\u6cb3\u6c49\u8857c\u51fa\u53e3\u65c1",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201807021147594856.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/20180702114814278.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807021148264047.jpg"]
+				}, {
+					"city": "\u676d\u5dde\u5e02",
+					"name": "\u676d\u5dde\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "120.215293",
+						"lat": "30.266561"
+					},
+					"area": "\u676d\u5dde\u5e02\u94b1\u6c5f\u65b0\u57ce\u65b0\u5858\u8def58\u53f7",
+					"area_detail": "\u65b0\u4f20\u5a92\u4ea7\u4e1a\u5927\u53a63\u697c",
+					"traffic": "\u4e1c\u7ad9\u57504\u53f7\u7ebf\uff0c\u6d66\u6cbf\u65b9\u5411\uff0c\u666f\u82b3\u7ad9\u4e0bA\u51fa\u53e3\u51fa",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201807130930273878.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130930257265.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130929064794.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130926011236.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130926006184.jpg"]
+				}, {
+					"city": "\u957f\u6c99\u5e02",
+					"name": "\u957f\u6c99\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "112.975867",
+						"lat": "28.197001"
+					},
+					"area": "\u957f\u6c99\u5e02\u5929\u5fc3\u533a\u6e58\u6c5f\u4e2d\u8def\u4e8c\u6bb536\u53f7",
+					"area_detail": "\u534e\u8fdc\u56fd\u9645\u4e2d\u5fc3\u5199\u5b57\u697c5\u53f7\u697c27\u697c",
+					"traffic": "\u4e58\u5750\u5730\u94c12\u53f7\u7ebf\u6e58\u6c5f\u4e2d\u8def\u7ad9\uff081A\u51fa\u53e3\u51fa\uff09\u6b65\u884c600\u7c73\u3002",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201807021132077425.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807021132236889.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807101527574659.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271750113359.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271750103726.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/2018082717500819.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271750075208.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271750057352.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271750042320.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271750035519.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271750007807.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271749595935.jpg"]
+				}, {
+					"city": "\u6210\u90fd\u5e02",
+					"name": "\u6210\u90fd\u6821\u533a\u5730\u5740",
+					"point": {
+						"lng": "104.075527",
+						"lat": "30.664216"
+					},
+					"area": "\u9526\u6c5f\u533a\u5bbe\u9686\u88571\u53f7",
+					"area_detail": "\u5bbe\u9686\u88571\u53f7\u4ec1\u548c\u6625\u5929\u767e\u8d276\u697c",
+					"traffic": "\u5730\u94c12\u53f7\u7ebf\u5929\u5e9c\u5e7f\u573aF\u51fa\u53e3150\u7c73",
+					"tel": "186-6537-4998",
+					"work_time": "09: 00 - 18:00",
+					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201808271802075300.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271802061885.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271802053812.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271802038994.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201808271802022370.jpg"]
+				}];
+				var mapOpera = {
+					map: null,
+					c_point: {
+						"lng": "108.930367",
+						"lat": "34.328669"
+					},
+					allData: [],
+					curData: {},
+					myIcon: null,
+					idx: null,
+					init: function(allData) {
+						var _t = this;
+						_t.allData = allData || [];
+						_t.map = new BMap.Map('idx-map', {
+							minZoom: 5,
+							maxZoom: 18
+						});
+						var point = new BMap.Point(_t.c_point.lng, _t.c_point.lat);
+						_t.map.centerAndZoom(point, 5);
+						_t.map.enableScrollWheelZoom(true);
+						_t.myIcon = new BMap.Icon("http://www.tmsgschool.com/template/tianmishiguang/images/common/location.png", new BMap.Size(32, 32));
+						_t.getPlaceIP();
+						_t.initSelList();
+						_t.initMarker();
+					},
+					initSelList: function() {
+						var _t = this;
+						var selList = $('.m-idx-schoolmap .right-message .toggle-menu .select-list');
+						var html = '';
+						for(var i = 0; i < _t.allData.length; i++) {
+							var item = _t.allData[i];
+							html += '<li data-idx=' + i + '>' + item.name + '</li>'
+						}
+						selList.html(html);
+					},
+					//初始覆盖物
+					initMarker: function() {
+						var _t = this;
+						for(var i = 0; i < _t.allData.length; i++) {
+							var item = _t.allData[i];
+							//_t.addMarker(item.point);
+							_t.addClickHandler(item, i);
+						}
+					},
+					addClickHandler: function(item, idx) {
+						var _t = this;
+						var content = "<div class='cm-marker' id='marker" + idx + "'>" +
+							"<h5>" + item.name + "</h5>" +
+							"<p class='address'>" + item.area + item.area_detail + "</p>" +
+							"<p class='traffic'>路线：" + item.traffic + "</p>" +
+							"<p class='tel'>电话：" + item.tel + "</p>" +
+							"<p class='work-time'>营业时间：" + item.work_time + "</p></div>"
+						var point = new BMap.Point(item.point.lng, item.point.lat);
+						var marker = new BMap.Marker(point, {
+							icon: _t.myIcon
+						});
+						_t.map.addOverlay(marker);
+						marker.addEventListener("click", function(e) {
+							_t.openInfo(content, e)
+						});
+					},
+					openInfo: function(content, e) {
+						var _t = this;
+						var opts = {
+							width: 262, // 信息窗口宽度
+							height: 182, // 信息窗口高度
+							title: "", // 信息窗口标题
+							enableMessage: true //设置允许信息窗发送短息
+						};
+						var p = e.target;
+						var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+						var infoWindow = new BMap.InfoWindow(content, opts); // 创建信息窗口对象
+						_t.map.openInfoWindow(infoWindow, point); //开启信息窗口
+					},
+					//添加覆盖物
+					addMarker: function(point) {
+						var _t = this;
+						var point = new BMap.Point(point.lng, point.lat);
+						var marker = new BMap.Marker(point, {
+							icon: _t.myIcon
+						});
+						_t.map.addOverlay(marker);
+					},
+					//IP定位城市
+					getPlaceIP: function() {
+						var _t = this;
+						var idx;
+						var myCity = new BMap.LocalCity();
+						myCity.get(function(result) {
+							var cityName = result.name;
+							// _t.map.setCenter(cityName);
+							_t.map.setCenter("武汉市");
+							// $(".u-select-area .area-show").html(cityName);
+							_t.idx = _t.tempCity(cityName)
+							_t.curData = _t.allData[_t.idx];
+							_t.map.panTo(new BMap.Point(_t.curData.point.lng, _t.curData.point.lat));
+							// _t.showMarker(_t.idx);
+							_t.showInitMarker(_t.idx);
+							_t.showImg(_t.idx);
+						});
+					},
+					showInitMarker: function(idx) {
+						var _t = this;
+						var item = _t.allData[idx];
+						var point = new BMap.Point(item.point.lng, item.point.lat);
+						$('.m-idx-schoolmap .right-message .toggle-menu .value').html(item.name + '<i></i>');
+					},
+					showMarker: function(idx) {
+						var _t = this;
+						var item = _t.allData[idx];
+						var point = new BMap.Point(item.point.lng, item.point.lat);
+						var opts = {
+							width: 262, // 信息窗口宽度
+							height: 182, // 信息窗口高度
+							title: "", // 信息窗口标题
+							enableMessage: true //设置允许信息窗发送短息
+						};
+						var sContent = "<div class='cm-marker' id='marker" + idx + "'>" +
+							"<h5>" + item.name + "</h5>" +
+							"<p class='address'>" + item.area + item.area_detail + "</p>" +
+							"<p class='traffic'>路线：" + item.traffic + "</p>" +
+							"<p class='tel'>电话：" + item.tel + "</p>" +
+							"<p class='work-time'>营业时间：" + item.work_time + "</p></div>";
+						_t.map.panTo(point);
+						var infoWindow = new BMap.InfoWindow(sContent, opts);
+						_t.map.openInfoWindow(infoWindow, point);
+						$('.m-idx-schoolmap .right-message .toggle-menu .value').html(item.name + '<i></i>');
+					},
+					showImg: function(idx) {
+						var _t = this;
+						var imgArr = _t.allData[idx];
+						var max = imgArr.imgs.length;
+						console.log("max" + max);
+						var html = '';
+						if(max > 0) {
+							html += '<div class="top"><img src="' + imgArr.imgs[0] + '" ></div>'
+						}
+						if(max > 1) {
+							html += '<div class="bottom map-img-box"><div class="map-img-list">'
+							for(var i = 1; i < max; i++) {
+								html += '<div class="img"><img src="' + imgArr.imgs[i] + '"></div>';
+							}
+							html += '</div><div class="map-img-list1"></div></div><img class="img-list-prel" src="http://www.tmsgschool.com/template/tianmishiguang/images/common/arrow-left.png"><img class="img-list-nextr" src="http://www.tmsgschool.com/template/tianmishiguang/images/common/arrow-right.png">';
+						}
+						$('.m-idx-schoolmap .img-container').html(html);
+						var $imglist = $(".map-img-box .map-img-list").html();
+						$(".map-img-box .map-img-list1").html($imglist);
+						var $list1 = $(".map-img-box .map-img-list");
+						var $list2 = $(".map-img-box .map-img-list1");
+						le = $('.map-img-box .map-img-list').children(".img").length;
+						console.log("img子类个数" + le);
+						//获取宽度，带边距
+						sublilen = $(".map-img-box .map-img-list").children(".img").outerWidth(true)
+						w = le * sublilen;
+						console.log("img宽度" + sublilen)
+						// 根据li个数设置ul宽度
+						$(".map-img-box .map-img-list,.map-img-box .map-img-list1").width(w + "px");
+						$(".map-img-box .map-img-list1").css("left", w + "px");
+						//图片左右滑动
+						var list1left = 0;
+						var list2left = w;
+						$(".img-list-prel").click(function() {
+							console.log('点击了向左滑动');
+							if((-list1left == w) || (le <= 2)) {
+								console.log('list1');
+								$list1.css("z-index", 333);
+								$list2.css("z-index", 334);
+								list1left = w;
+							} else if((-list2left == w)) {
+								console.log('list2');
+								$list1.css("z-index", 334);
+								$list2.css("z-index", 333);
+								list2left = w;
+							}
+							list1left -= sublilen;
+							list2left -= sublilen;
+							$(".map-img-list").animate({
+								"left": list1left
+							}, 500);
+							$(".map-img-list1").animate({
+								"left": list2left
+							}, 500);
+							// console.log(marleft);
+						});
+						$(".img-list-nextr").click(function() {
+							if((list1left == w) || (le <= 2)) {
+								console.log('list1');
+								$list1.css({
+									"z-index": 333,
+									"left": -w
+								});
+								$list2.css("z-index", 334);
+								list1left = -w;
+							} else if((list2left == w)) {
+								console.log('list2');
+								$list1.css("z-index", 334);
+								$list2.css({
+									"z-index": 333,
+									"left": -w
+								});
+								list2left = -w;
+							}
+							list1left += sublilen;
+							list2left += sublilen;
+							$(".map-img-list").animate({
+								"left": list1left
+							}, 500);
+							$(".map-img-list1").animate({
+								"left": list2left
+							}, 500);
+						});
+					},
+					//
+					tempCity: function(city) {
+						var _t = this;
+						var def;
+						for(var i = 0; i < _t.allData.length; i++) {
+							var item = _t.allData[i];
+							if(item.city == city) {
+								return i
+							}
+							if(item.city == '深圳市') {
+								def = i
+							}
+						}
+						return def;
+					}
+				};
+				mapOpera.init(pointData);
+				// 
+				//地图切换列表打开
+				$(".m-idx-schoolmap .right-message .toggle-menu .value").click(function() {
+					var _t = $(this);
+					var setlist = _t.siblings('.select-list');
+					if(setlist.css('display') == 'none') {
+						setlist.fadeIn();
+					} else {
+						setlist.fadeOut();
+					}
+				});
+				//切换城市数据
+				$('.m-idx-schoolmap .select-list').on('click', 'li', function() {
+					var idx = $(this).attr('data-idx');
+					mapOpera.showMarker(idx);
+					mapOpera.showImg(idx);
+					$(this).parent().fadeOut();
+				});
+			})
+		</script>
+		
+		<script type="text/javascript">
+			function bk8right() {
+				var sevroat = 0;
+				var padcur = 0;
+				$('.sev-right > i').hover(function() {
+					sevroat = sevroat + 360;
+					clearInterval(timer);
+					sl_triggerr();
+					$('.sev-content').css('transform', 'rotateY(' + sevroat + 'deg)');
+					var thcla = $(this).removeClass('current').attr('class');
+					$('.sev-right > i').removeClass('current');
+					$('.pad_content>img').attr('class', thcla);
+					$(this).addClass('current');
+					setTimeout(function() {
+						$('.sev-content > div').hide();
+						$('.' + thcla + '-content').show();
+					}, 250)
+				}, function() {
+					return false;
+				});
+			}
 
+			function sl_triggerr() {
+				timer = setInterval(function() {
+					var sevnum = $('.sev-right > i.current').index(); //获取当前是第几个
+					if(sevnum == 2) {
+						sevnum = 0;
+					} else {
+						sevnum++;
+					}
+					$('.sev-right > i').eq(sevnum).trigger('mouseenter');
+				}, 4000)
+			}
+			bk8right();
+			sl_triggerr();
+		</script>
 	</body>
 
 </html>

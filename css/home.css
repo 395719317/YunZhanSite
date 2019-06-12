@@ -4,7 +4,7 @@
 }
 
 .homead img {
-	width: 1074px;
+	width: 1100px;
 	margin-top: 20px;
 }
 
@@ -12,96 +12,624 @@
 	margin: 30px 0;
 	display: flex;
 	justify-content: center;
-	align-items:center;
-	height:66px;
+	align-items: center;
+	height: 66px;
 }
 
 .contact .ctit p {
 	font-size: 22px;
 	color: #0C8DFF;
 }
-.contact .ctit{
-	margin-right:30px;
-}
-.contact .tel{
-	margin-right:30px;
-	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
-    font-weight: 700;
-    font-style: normal;
-    font-size: 38px;
-    color: #FF7E00;
+
+.contact .ctit {
+	margin-right: 30px;
 }
 
-.contact .cname,.contact .cnum{
-	line-height: 50px;
-	height:50px;
-	width:250px;
-	border:1px solid #999999;
-	margin-right:20px;
+.contact .tel {
+	margin-right: 30px;
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 38px;
+	color: #FF7E00;
 }
-.contact .cname{
+
+.contact .cname,
+.contact .cnum {
+	line-height: 50px;
+	height: 50px;
+	width: 250px;
+	border: 1px solid #999999;
+	margin-right: 20px;
+}
+
+.contact .cname {
 	background: url(../images/common/name.png) no-repeat 6px center;
 }
 
-.contact .cnum{
+.contact .cnum {
 	background: url(../images/common/tel.png) no-repeat 10px center;
 }
-.contact .cbtn{
+
+.contact .cbtn {
 	line-height: 45px;
-	height:45px;
-	padding:0 15px;
+	height: 45px;
+	padding: 0 15px;
 	color: white;
 	background-color: #7f523c;
-	border:none;
+	border: none;
 	border-radius: 7px;
-	
-	
-}
-.contact input{
-	font-size: 19px;
-	padding-left:5px;
-	box-sizing: border-box;
-	margin-left:40px;
-	height: 38px;
-	width: 200px;
-	border:none;
-	border-left:1px solid #999999 ;
-}
-.map{
-	width:1100px;
-	margin:0 auto;
 }
 
-.map_txt{
-	margin: 15px 0;
-	height:60px;
+.contact input {
+	font-size: 19px;
+	padding-left: 5px;
+	box-sizing: border-box;
+	margin-left: 40px;
+	height: 38px;
+	width: 200px;
+	border: none;
+	border-left: 1px solid #999999;
 }
-.map_txt p{
+
+.map {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.map_txt {
+	margin: 15px 0;
+	height: 60px;
+}
+
+.map_txt p {
 	line-height: 30px;
 	font-size: 18px;
-	height:30px;
+	height: 30px;
 	text-align: center;
 }
-.map_txt span{
-	font-size:18px;
+
+.map_txt span {
+	font-size: 18px;
 	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
-    font-weight: 700;
-    font-style: normal;
-    color: #0C8DFF;
+	font-weight: 700;
+	font-style: normal;
+	color: #0C8DFF;
 }
-.map_txt  p:nth-of-type(1) span{
-		line-height: 30px;
+
+.map_txt p:nth-of-type(1) span {
+	line-height: 30px;
 }
-.map_txt  p:nth-of-type(2) span{
+
+.map_txt p:nth-of-type(2) span {
 	margin-top: 6px;
 	font-size: 22px;
 }
 
-.map_txt p i{
+.map_txt p i {
 	display: inline-block;
-	width:40px;
-	margin-right:10px;
-	height:18px;
+	width: 40px;
+	margin-right: 10px;
+	height: 18px;
 	line-height: 18px;
 	background: url(../images/common/u166.png) no-repeat;
 }
+
+.cm-marker {
+	background: #fff;
+}
+
+.cm-marker h5 {
+	font-size: 18px;
+	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.cm-marker .address {
+	margin-top: 5px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #333;
+}
+
+.cm-marker .traffic {
+	margin-top: 5px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+.cm-marker .tel {
+	font-size: 12px;
+	color: #666;
+	margin-top: 5px;
+}
+
+.cm-container {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.img-list-prel {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	z-index: 222;
+	position: absolute;
+	margin-top: -100px;
+	margin-left: -38px;
+}
+
+.img-list-nextr {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	z-index: 222;
+	margin-top: -100px;
+	margin-left: 436px;
+}
+
+.m-idx-schoolmap {
+	/*padding: 60px 0;*/
+}
+
+.m-idx-schoolmap .schoolmap-container {
+	margin-top: 40px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: #fafafa;
+}
+
+.m-idx-schoolmap .schoolmap-container .left-map {
+	width: 670px;
+	height: 542px;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding: 20px 40px;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .toggle-menu {
+	position: relative;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .toggle-menu .value {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	font-size: 20px;
+	color: #333;
+	cursor: default;
+	background: #fff;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .toggle-menu .value i {
+	display: inline-block;
+	margin-left: 10px;
+	width: 12px;
+	height: 12px;
+	background: url("../images/common/icon-arrow.png") no-repeat center center;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .toggle-menu .select-list {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	-webkit-box-shadow: 0 0 4px 1px #ddd;
+	-moz-box-shadow: 0 0 4px 1px #ddd;
+	box-shadow: 0 0 4px 1px #ddd;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	z-index: 20;
+	display: none;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .toggle-menu .select-list li {
+	font-size: 16px;
+	color: #333;
+	text-align: center;
+	padding: 0 10px;
+	line-height: 30px;
+	overflow: hidden;
+	background: #fff;
+	cursor: default;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .toggle-menu .select-list li:hover,
+.m-idx-schoolmap .schoolmap-container .right-message .toggle-menu .select-list li.s-selected {
+	background: #7F523C;
+	color: #fff;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container {
+	margin-top: 26px;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .top {
+	height: 274px;
+	width: 454px;
+	overflow: hidden;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .top:hover img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .top img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	transition: all .5s ease;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .bottom {
+	width: 454px;
+	height: 148px;
+	margin-top: 8px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .bottom .map-img-list .img,
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .bottom .map-img-list1 .img {
+	width: 224px;
+	height: 148px;
+	float: left;
+	margin-right: 3px;
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .bottom .map-img-list .img img,
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .bottom .map-img-list1 .img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	transition: all .5s ease;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .bottom .map-img-list .img:hover img,
+.m-idx-schoolmap .schoolmap-container .right-message .img-container .bottom .map-img-list1 .img:hover img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.map-img-box {
+	position: relative;
+	overflow: hidden;
+}
+
+.map-img-list,
+.map-img-list1 {
+	width: 400%;
+	left: 0;
+	position: absolute;
+}
+
+.cm-main {
+	margin-bottom: 20px;
+}
+
+/*板块八 start*/
+
+.bk8 {
+    position: absolute; 
+    width: 1210px;
+    height: 580px;
+    left: 50%;
+    margin-left: -605px;
+    box-sizing: border-box;
+    padding: 10px;
+    /*top: 23%;*/ 
+}
+
+.sev-left {
+    display: none;
+    position: absolute;
+    width: 702px;
+    height: 451px;
+    top: 50%;
+    margin-top: -225px;
+    left: -10px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bk8.dx .sev-left {
+    display: block;
+    animation: bk8 0.6s linear;
+    -webkit-animation: bk8 0.6s linear;
+}
+
+@keyframes bk8 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bk8 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pad-box {
+    width: 702px;
+    height: 451px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    margin-top: -225px;
+    left: 0;
+}
+
+.pad {
+    width: 702px;
+    height: 451px;
+    background-image: url(http://file.honey-lovely.com/resources/2017/img/icon/pad.png);
+    position: relative;
+    z-index: 1;
+}
+
+.pad_content {
+    width: 424px;
+    height: 326px;
+    background-color: black;
+    position: absolute;
+    top: 59px;
+    left: 123px;
+    overflow: hidden;
+}
+
+@-webkit-keyframes bkimgan {
+    from {
+        top: -652px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes bkimgan {
+    from {
+        top: -652px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.bk8.dx .pad_content img {
+    -webkit-animation: bkimgan 1s 0.3s;
+    animation: bkimgan 1s 0.3s;
+}
+
+.pad_content img {
+    position: absolute;
+    border: none;
+    left: 0;
+    top: 0;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s;
+}
+
+.pad_content img.xxj {
+    left: 0;
+    top: 0;
+}
+
+.pad_content img.dzb {
+    left: 0;
+    top: -326px;
+}
+
+.pad_content img.mm {
+    left: 0;
+    top: -652px;
+}
+
+.sev-right {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 0;
+    width: 817px;
+    height: 517px;
+    background-image: url(http://file.honey-lovely.com/resources/2017/img/icon/sve-right-bg.png);
+    display: none;
+}
+
+.bk8.dx .sev-right {
+    display: block;
+    animation: bk8 0.9s linear;
+    -webkit-animation: bk8 0.9s linear;
+}
+
+.sev-content {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    /*background-color: red;*/
+    position: absolute;
+    right: 135px;
+    top: 73px;
+    background-image: url(http://file.honey-lovely.com/resources/2017/img/icon/mdglgj.png);
+    /*background-color: #fce05b;*/
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.sev-content.dx {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}
+
+.sev-right>i {
+    position: absolute;
+    /* background-image: url(http://file.honey-lovely.com/resources/2017/img/icon/gongju_icon.png); */
+    background-image: url(../images/homead/gongju_icon.png);
+    background-repeat: no-repeat;
+    border: 0px solid #fff;
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 50%;
+    /*box-sizing: border-box;*/
+    opacity: 0.8;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.sev-right>i.current {
+    -webkit-animation: bk8cur 3s linear infinite;
+    animation: bk8cur 3s linear infinite;
+    border: 3px solid #fff;
+    border: none \9;
+    opacity: 1;
+}
+
+@-webkit-keyframes bk8cur {
+    0% {
+        box-shadow: 0 0 0px #fff, 0 0 0px #fff;
+    }
+    60% {
+        box-shadow: 0 0 40px #fff, 0 0 0px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff, 0 0 0px #fff;
+    }
+}
+
+@keyframes bk8cur {
+    0% {
+        box-shadow: 0 0 0px #fff, 0 0 0px #fff;
+    }
+    60% {
+        box-shadow: 0 0 40px #fff, 0 0 0px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0px #fff, 0 0 0px #fff;
+    }
+}
+
+.sev-right>i.xxj {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background-position: 8px -176px;
+    left: 185px;
+    bottom: 90px;
+    cursor: pointer;
+}
+
+.sev-right i.dzb {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background-position: -6px 0px;
+    left: 199px;
+    top: 90px;
+    cursor: pointer;
+}
+
+.sev-right i.mm {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background-position: -6px -88px;
+    right: 77px;
+    top: 74px;
+    cursor: pointer;
+}
+
+.sev-content>div {
+    width: 100%;
+    height: 100%;
+}
+
+.sev-content>div>i {
+    display: block;
+    width: 219px;
+    height: 106px;
+    /* background-image: url(http://file.honey-lovely.com/resources/2017/img/icon/gongju-content-icon.png); */
+    background-image: url(../images/homead/gongju-content-icon1.png);
+    background-repeat: no-repeat;
+    margin: 40px auto 20px auto;
+}
+
+.sev-content>div>p {
+    color: #682F24;
+    width: 270px;
+    margin-left: 56px;
+    font-size: 15px;
+    text-indent: 2em;
+    line-height: 1.5em;
+}
+
+.xxj-content i {
+    background-position: 0 36px;
+}
+
+.dzb-content i {
+    background-position: 0 -175px;
+}
+
+.mm-content i {
+    background-position: 0 -72px;
+}
+#section8{
+	width:1100px;
+	margin:0 auto;
+}
+.fp-tableCell{
+	position:relative;
+	overflow: hidden;
+}
+
+/*板块八 end*/

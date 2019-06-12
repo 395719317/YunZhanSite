@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="http://file.honey-lovely.com/resources/2017/css/index.css">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="section8" class="module section fp-section fp-table active" style="background-color: rgb(157, 232, 237); height: 727px;">
+			<div class="fp-tableCell" style="height:807px;">
+
+				<div class="control bk8 dx">
+					<div class="sev-left">
+						<div class="pad-box">
+							<div class="pad"></div>
+							<div class="pad_content">
+								<img class="xxj" src="http://file.honey-lovely.com/resources/2017/img/icon/svelunbo.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="sev-right">
+						<i class="xxj current" id="xxjClick"></i>
+						<i class="dzb" id="dzbClick"></i>
+						<i class="mm" id="mmClick"></i>
+						<div class="sev-content" style="transform: rotateY(7560deg);">
+							<div class="xxj-content hand" style="display: block;">
+								<i class=""></i>
+								<p>
+									新零售的品牌变革，赋能人、货、场、客重构。以消费者为中心，重构人、货、场、客，通过新技术和O2O，打通各渠道之间的商品、数据和会员，整合多维度的应用场景，最大化品牌产出和运营效率。
+								</p>
+							</div>
+							<div class="mm-content  hand" style="display: none;">
+								<i class=""></i>
+								<p>
+									实时了解门店经营状况及客户购物习惯，整合产品销售、导购业绩和会员消费数据，并提供决策，为门店管理、运筹运营和会员营销提供参考指导为，增加店长运营管理能力
+								</p>
+							</div>
+							<div class="dzb-content hand" style="display: none;">
+								<i class=""></i>
+								<p>
+									实体门店与微商城线上线下相结合，消费者在“萌蜜”轻松选购商品，门店可了解商城销及导购业绩。萌蜜还设置跨境商品专区。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-1.8.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function bk8right() {
+				var sevroat = 0;
+				var padcur = 0;
+				$('.sev-right > i').hover(function() {
+					sevroat = sevroat + 360;
+					clearInterval(timer);
+					sl_triggerr();
+					$('.sev-content').css('transform', 'rotateY(' + sevroat + 'deg)');
+					var thcla = $(this).removeClass('current').attr('class');
+					$('.sev-right > i').removeClass('current');
+					$('.pad_content>img').attr('class', thcla);
+					$(this).addClass('current');
+					setTimeout(function() {
+						$('.sev-content > div').hide();
+						$('.' + thcla + '-content').show();
+					}, 250)
+				}, function() {
+					return false;
+				});
+			}
+
+			function sl_triggerr() {
+				timer = setInterval(function() {
+					var sevnum = $('.sev-right > i.current').index(); //获取当前是第几个
+					if(sevnum == 2) {
+						sevnum = 0;
+					} else {
+						sevnum++;
+					}
+					$('.sev-right > i').eq(sevnum).trigger('mouseenter');
+				}, 4000)
+			}
+			bk8right();
+			sl_triggerr();
+		</script>
+	</body>
+
+</html>

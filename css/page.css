@@ -3747,6 +3747,10 @@ p {
 	margin-bottom: 65px;
 }
 
+.cm-main .address {
+	margin-bottom: 0px;
+}
+
 .address .opac h3 {
 	font-size: 16px;
 	color: #1d92ff;

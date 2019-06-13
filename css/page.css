@@ -203,7 +203,7 @@ p {
 	width: 123px;
 	text-align: center;
 	font-size: /*17*/
-	13px;
+	16px;
 	color: #fff;
 }
 
@@ -217,9 +217,8 @@ p {
 	position: absolute;
 	min-width: 128px;
 	display: none;
-	padding: 0 0 20px 0;
-	background: #2784d9/*006cdc*/
-	;
+	/* padding: 0 0 20px 0; */
+	background: #2784d9/*006cdc*/;
 }
 
 .site_nav .site_nav_ul ol li {
@@ -230,6 +229,7 @@ p {
 }
 
 .site_nav .site_nav_ul ol li>a {
+	text-align: center;
 	display: block;
 	line-height: 30px;
 	height: 30px;
@@ -238,8 +238,7 @@ p {
 	13px;
 	color: #fff;
 	padding: 0 29px;
-	background: #2784d9/*006cdc*/
-	;
+	background: #2784d9/*006cdc*/;
 }
 
 .site_nav .site_nav_ul ol li>a:hover {

@@ -128,7 +128,7 @@
 								<a href="news.html?idx=0">新闻动态</a>
 							</li>
 						</ol>
-					</li>		
+					</li>
 					<li class="">
 						<a href="contact.html?idx=0">联系我们</a>
 						<ol style="display: none;">
@@ -209,7 +209,7 @@
 							<img src="../images/homead/20160217172648.png">
 							<img src="../images/else/video_overimg1.png" class="over_img">
 						</div>
-						<ul>
+						<!--<ul>
 
 							<li>
 								<a href="news_detail.html" class="clearfix"><span class="fl">◇  优家宝贝将打造中国民族品牌</span><time class="fr">2019-05-17</time></a>
@@ -244,6 +244,7 @@
 							</li>
 
 						</ul>
+					-->
 					</div>
 					<div class="dynRi fr">
 						<h2>最新加盟店铺<span><a href="news.html">READ  MORE</a><img src="../images/common/more.jpg"></span></h2>
@@ -345,7 +346,7 @@
 		</div>
 		<div class="homead">
 			<img src="../images/homead/u196.jpg" />
-			<img src="../images/homead/u198.jpg" />	
+			<img src="../images/homead/u198.jpg" />
 		</div>
 		<div class="map">
 			<div class="map_txt">
@@ -501,6 +502,7 @@
 				</div>
 			</div>
 		</footer>
+		
 		<script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
 		<script type="text/javascript" src="../js/swiper.js"></script>
 		<script type="text/javascript" src="../js/main.js"></script>
@@ -548,7 +550,7 @@
 					"traffic": "八卦岭b出口步行550米",
 					"tel": "0755-22308665",
 					"work_time": "09: 00 - 18:00",
-					"imgs": ["http:\/\/www.tmsgschool.com\/upload\/img\/201806290940242260.png", "http:\/\/www.tmsgschool.com\/upload\/img\/201807101520515615.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807101520508390.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923074886.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923058963.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923042801.jpg", "http:\/\/www.tmsgschool.com\/upload\/img\/201807130923033401.jpg"]
+					"imgs": ["../images/homead/map6.png", "../images/homead/map1.png", "../images/homead/map2.png", "../images/homead/map3.png", "../images/homead/map4.png", "../images/homead/map5.png"]
 				}, {
 					"city": "北京市",
 					"name": "北京地址",
@@ -579,8 +581,8 @@
 				var mapOpera = {
 					map: null,
 					c_point: {
-						"lng": "108.930367",
-						"lat": "34.328669"
+						"lng": "114.103132",
+						"lat": "22.567708"
 					},
 					allData: [],
 					curData: {},
@@ -861,6 +863,31 @@
 			}
 			bk8right();
 			sl_triggerr();
+		</script>
+
+		<script>
+			$(function() {
+				$.ajax({
+					//请求方式为get
+					type: "GET",
+					//json文件位置
+					url: "../js/news.json",
+					//返回数据格式为json
+					dataType: "json",
+					//请求成功完成后要执行的方法
+					success: function(data) {
+						console.log('json', data);
+						var str = "<ul>";
+						$.each(data, function(i, n) {
+							str += "<li><a href='news_detail.html?id=" + n.id + "'  class='clearfix'><span class='fl'>◇  " + n["title"] + "</span><time class='fr'>" + n.date + "</time></a></li>";
+						})
+
+						str += "</ul>";
+						console.log(str);
+						$(".home_pagecon .dynLe.fl.clearfix").append(str);
+					}
+				});
+			});
 		</script>
 	</body>
 

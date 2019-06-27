@@ -16,7 +16,7 @@
 			<div class="concenter">
 				<h1><a href="/"><img src="../images/common/logo.png"></a><!--<span class="logo_span">专业母婴<br/>品牌加盟</span>--></h1>
 				<div class="f">
-					<span><b>国家商务特许经营备案</b><br>备案号：0311400111800028</span>
+					<span><b>国家商务特许经营备案</b><br>备案号：1812106811800028</span>
 					<div style="color:#a0a0a0;margin-top:10px;font-size:18px;font-weight:bold;">创业有风险，投资需谨慎</div>
 				</div>
 				<div class="top_r">
@@ -491,7 +491,7 @@
 				<div class="footer_bottom">
 					<div class="concenter">
 						<p class="footer_p">Copyright 2015 深圳商栈互联科技有限公司 Inc.,
-							<a style="color:#fff" href="http://www.miitbeian.gov.cn" target="_blank">ICP备案网站信息：粤ICP备18121068号-1 </a><br>
+							<a style="color:#fff" href="http://www.miitbeian.gov.cn" target="_blank">ICP备案网站信息：粤ICP备18121068号-2 </a><br>
 						</p>
 
 						<div class="footer_abox">
@@ -502,7 +502,7 @@
 				</div>
 			</div>
 		</footer>
-		
+
 		<script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
 		<script type="text/javascript" src="../js/swiper.js"></script>
 		<script type="text/javascript" src="../js/main.js"></script>
@@ -710,7 +710,6 @@
 						var _t = this;
 						var imgArr = _t.allData[idx];
 						var max = imgArr.imgs.length;
-						console.log("max" + max);
 						var html = '';
 						if(max > 0) {
 							html += '<div class="top"><img src="' + imgArr.imgs[0] + '" ></div>'
@@ -728,11 +727,9 @@
 						var $list1 = $(".map-img-box .map-img-list");
 						var $list2 = $(".map-img-box .map-img-list1");
 						le = $('.map-img-box .map-img-list').children(".img").length;
-						console.log("img子类个数" + le);
 						//获取宽度，带边距
 						sublilen = $(".map-img-box .map-img-list").children(".img").outerWidth(true)
 						w = le * sublilen;
-						console.log("img宽度" + sublilen)
 						// 根据li个数设置ul宽度
 						$(".map-img-box .map-img-list,.map-img-box .map-img-list1").width(w + "px");
 						$(".map-img-box .map-img-list1").css("left", w + "px");
@@ -740,14 +737,11 @@
 						var list1left = 0;
 						var list2left = w;
 						$(".img-list-prel").click(function() {
-							console.log('点击了向左滑动');
 							if((-list1left == w) || (le <= 2)) {
-								console.log('list1');
 								$list1.css("z-index", 333);
 								$list2.css("z-index", 334);
 								list1left = w;
 							} else if((-list2left == w)) {
-								console.log('list2');
 								$list1.css("z-index", 334);
 								$list2.css("z-index", 333);
 								list2left = w;
@@ -764,7 +758,6 @@
 						});
 						$(".img-list-nextr").click(function() {
 							if((list1left == w) || (le <= 2)) {
-								console.log('list1');
 								$list1.css({
 									"z-index": 333,
 									"left": -w
@@ -772,7 +765,6 @@
 								$list2.css("z-index", 334);
 								list1left = -w;
 							} else if((list2left == w)) {
-								console.log('list2');
 								$list1.css("z-index", 334);
 								$list2.css({
 									"z-index": 333,
@@ -876,14 +868,12 @@
 					dataType: "json",
 					//请求成功完成后要执行的方法
 					success: function(data) {
-						console.log('json', data);
 						var str = "<ul>";
 						$.each(data, function(i, n) {
 							str += "<li><a href='news_detail.html?id=" + n.id + "'  class='clearfix'><span class='fl'>◇  " + n["title"] + "</span><time class='fr'>" + n.date + "</time></a></li>";
 						})
 
 						str += "</ul>";
-						console.log(str);
 						$(".home_pagecon .dynLe.fl.clearfix").append(str);
 					}
 				});
